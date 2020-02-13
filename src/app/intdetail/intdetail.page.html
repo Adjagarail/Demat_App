@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+        </ion-buttons>
+    <ion-title>intdetail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngFor="let programme1 of program">
+    <div *ngIf="this.idUrl == programme1.AnimerPar">
+      {{programme1.Titre}}<br>
+      {{programme1.HeureFin}} <br>
+      {{programme1.HeureFin}} <br>
+      {{programme1.Explicatif}} <br>
+    </div>
+
+  </div>
+</ion-content>
