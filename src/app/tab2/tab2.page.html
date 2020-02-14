@@ -87,7 +87,7 @@
 
 <div *ngFor="let Data of donnees">
   <ion-list>
-    <ion-item [routerLink]="['/intdetail/', Data.id]">
+    <ion-item>
       <ion-thumbnail slot="start">
         <img src="{{this.link_url}}{{ Data.Avatar}}" alt="">
       </ion-thumbnail>

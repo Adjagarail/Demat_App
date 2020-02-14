@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class Tab2Page {
   intervenant: any;
-  public donnees = [];
+  public donnees: any = [];
   link_url = "http://app.joinpuzzle.com/public/uploads/images/intervenant/";
   api = "http://app.joinpuzzle.com/public/api/intervenants.json";
 
@@ -30,7 +30,7 @@ export class Tab2Page {
 
   doRefresh(event) {
     setTimeout(() =>{
-      this.getIntervenant(this.api, 1, false)
+      this.getIntervenant()
         .then(() => {
           event.target.complete();
         })

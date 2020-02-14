@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class Tab1Page {
   programme: any;
-  public donnee = [];
+  public donnee: any = [];
   shownSessions: any = [];
   api_Programme = "http://app.joinpuzzle.com/public/api/programmes.json";
   constructor(public http: HttpClient) {
@@ -32,7 +32,7 @@ export class Tab1Page {
   // Pour la Actualisation et la reactualisation des Données
   doRefresh(event) {
     setTimeout(() => {
-      this.getProgramme(this.api_Programme, 1, false)
+      this.getProgramme()
         .then(() => {
           event.target.complete();
         })

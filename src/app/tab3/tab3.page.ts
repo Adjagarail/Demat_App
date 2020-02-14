@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class Tab3Page {
   APropos: any;
-  public donneees = [];
+  public donneees:any = [];
   link_postere = "http://app.joinpuzzle.com/public/uploads/images/postere/";
   api_Propos = "http://app.joinpuzzle.com/public/api/apropos.json";
 
@@ -32,7 +32,7 @@ export class Tab3Page {
   // Pour la Actualisation et la reactualisation des Données
   doRefresh(event) {
     setTimeout(() => {
-      this.getPropos(this.api_Postere, 1, false)
+      this.getPropos()
         .then(() => {
           event.target.complete();
         })
@@ -42,5 +42,4 @@ export class Tab3Page {
     }, 3000)
 
   }
-
 }

@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class IntdetailPage implements OnInit {
   program: any;
-  public donnee = [];
+  public donnee: any = [];
   Intervenant = 'http://app.joinpuzzle.com/public/api/intervenants.json';
   public iDetails: any;
   public idUrl: any;
