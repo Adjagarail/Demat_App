@@ -7,15 +7,42 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  {{idDetail}}
+<ion-content class="ion-padding ">
+    <div class="support-logo ion-text-center">
+      <img align="center" src="../../assets/icon/dematdays.jpg" alt="Demat Days Logo" />
+    </div>
   <div *ngFor="let programme of programmeData1">
     <div *ngIf="idDetail == programme.id">
-      {{programme.Titre}}<br>
+      <!-- {{programme.Titre}}<br>
       {{programme.HeureDemarrage}}<br>
       {{programme.HeureFin}}<br>
       {{programme.Salle}}<br>
-      {{programme.Explicatif}}
+      {{programme.Explicatif}}  -->
+        <div class="ion-text-uppercase">
+          <h6 style="font-size:14px;"class="ion-text-center"> {{programme.Titre}} </h6>
+        </div>
+        <ion-grid style="font-size:14px;">
+          <ion-row>
+            <ion-col class="ion-text-start">
+              <p> Démarrage </p>
+              {{programme.HeureDemarrage | date: 'HH:mm' }} 
+            </ion-col>
+            <ion-col class="ion-text-center">
+              <p> Fin </p>
+               {{programme.HeureFin | date: 'HH:mm' }} 
+            </ion-col>
+            <ion-col class="ion-text-end">
+              <p> Salle </p>
+              {{programme.Salle}}
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+        <div class="ion-padding">
+          <p style="font-size:14px;" class="ion-text-justify">
+            {{programme.Explicatif}}
+          </p>
+        </div>
+
     </div>
   </div>
 </ion-content>

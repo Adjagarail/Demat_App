@@ -35,31 +35,46 @@
     </div>
 
 <div *ngFor="let Propos of donneees">
-  <img src="{{this.link_postere}}{{Propos.Postere}}" alt="">
+  <div class="support-logo ion-text-center">
+  <img align="center" src="{{this.link_postere}}{{Propos.Postere}}" alt="Demat Days Logo"/>
+  </div>
+
+        <ion-text class="ion-text-justify">
+          <p style="font-size:14px; font-family:helveticca;">
+            {{ Propos.APropos }}
+          </p>
+        </ion-text>
+
   <ion-list lines="none">
     <ion-item>
       <ion-icon name="calendar" slot="start"></ion-icon>
       <ion-label position="stacked"> Date de début </ion-label>
-      <p> {{ Propos.Ouverture | date: 'dd MMM yyyy' }} </p>
+      <p style="font-size:16px; font-family:helveticca;"> {{ Propos.Ouverture | date: 'dd MMM yyyy' }} </p>
     </ion-item>
 
     <ion-item>
       <ion-icon name="calendar" slot="start"></ion-icon>
       <ion-label position="stacked"> Date de fin </ion-label>
-      <p> {{ Propos.Fermeture | date: 'dd MMM yyyy' }} </p>
+      <p style="font-size:16px; font-family:helveticca;"> {{ Propos.Fermeture | date: 'dd MMM yyyy' }} </p>
     </ion-item>
 
     <ion-item>
       <ion-icon name="pin" slot="start"></ion-icon>
       <ion-label position="stacked"> Adresse </ion-label>
-      <p> {{ Propos.Adresse }} </p>
+      <p style="font-size:16px; font-family:helveticca;"> {{ Propos.Adresse }} </p>
     </ion-item>
 
   </ion-list>
-
-      <ion-text class="ion-text-justify">
-      {{ Propos.APropos }}
-      </ion-text>
+    <h5 class="ion-text-uppercase ion-text-center"> Partenaires et Sponsors </h5>
+  <ion-slides [options]="sliderConfig">
+    <ion-slide *ngFor="let Sponsor of donneeees">
+    <div>
+      <ion-card>
+        <img src="{{this.link_sponsor}}{{Sponsor.Logo}}" style="height:80px!important;" alt="{{Sponsor.Sponsor}}">
+      </ion-card>
+    </div>
+    </ion-slide>
+  </ion-slides>
 </div>
 
 </ion-content>
