@@ -53,6 +53,7 @@ export class Tab3Page {
           event.target.complete();
         });
     }, 3000);
+    
   }
   // Fetch tous les Données issues de l'entité Sponsor et Partenaires
 
