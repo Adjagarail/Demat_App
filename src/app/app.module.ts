@@ -14,7 +14,7 @@ import { ProgrammeService } from './programme.service';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(),HttpClientModule, AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot({_forceStatusbarPadding:true}),HttpClientModule, AppRoutingModule],
   providers: [
     StatusBar,
     ProgrammeService,

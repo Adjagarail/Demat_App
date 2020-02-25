@@ -71,4 +71,17 @@ export class Tab3Page {
       );
     });
   }
+
+  refreshSponsor(event) {
+    setTimeout(() => {
+      this.getSponsor()
+        .then(() => {
+          event.target.complete();
+        })
+        .catch(() => {
+          event.target.complete();
+        });
+    }, 3000);
+
+  }
 }
