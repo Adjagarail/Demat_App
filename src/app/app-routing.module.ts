@@ -11,10 +11,6 @@ const routes: Routes = [
     loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
   },
   {
-    path: 'detail/:id',
-    loadChildren: () => import('./detail/detail.module').then( m => m.DetailPageModule)
-  },
-  {
     path: 'intdetail/:id',
     loadChildren: () => import('./intdetail/intdetail.module').then( m => m.IntdetailPageModule)
   }

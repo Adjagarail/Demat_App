@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-title>
       Le Programme
     </ion-title>
@@ -13,14 +13,14 @@
 
 <ion-list #scheduleList [hidden]="shownSessions === 0">
   <ion-item-group *ngFor="let Prog of donnee" [hidden]="Prog.hide">
-    <ion-item-divider sticky>
+    <ion-item-divider color="medium" sticky>
       <ion-label>
         {{Prog.Jour}}
       </ion-label>
     </ion-item-divider>
 
     <ion-item-sliding>
-      <ion-item [routerLink]="['/detail/', Prog.id]">
+      <ion-item [routerLink]="['../detail/', Prog.id]">
         <ion-label>
           <h3>{{Prog.Titre}}</h3>
           <p>
